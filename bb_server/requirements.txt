@@ -19,7 +19,7 @@ hiredis==0.2.0
 Jinja2==2.10
 jsmin==2.2.0
 misaka==2.0.0
-Pillow==3.2.0
+Pillow==3.3.0
 Pygments==2.1
 pytz==2018.3
 redis==2.10.5

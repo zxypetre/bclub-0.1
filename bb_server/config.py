@@ -66,7 +66,7 @@ MAIL_DEFAULT_SENDER = '609313700@qq.com'
 # MAIL_SUPPRESS_SEND = True
 
 #SERVER_NAME = ' https://nxqwazndlk.localtunnel.me:8000'
-SERVER_URL = 'http://sinitek.ymhui999.com:1234'
+SERVER_URL = 'http://zxypetre.ymhui999.com:1234'
 SUBDOMAIN = {'forums': False, 'docs': False}
 
 # logging setting
