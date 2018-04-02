@@ -12,7 +12,6 @@
 # ********************************************************************************
 from flask import request, current_app
 from flask_wtf.csrf import CSRFProtect
-from flask_avatar.avatar import Avatar
 from flask_auth.models import db
 from flask_auth.redis import Redis
 from flask_auth.mail import Mail
@@ -30,9 +29,18 @@ principal = Principal()
 search = Search(db=db)
 
 
-class AvatarCache(Avatar):
-    @cache.cached(
-        timeout=180, key_prefix=lambda: "avatar:{}".format(request.url))
+class AvatarCache(object):
+    def __init__(self, app=None):
+        if app is not None:
+            self.app = app
+            self.init_app(self.app)
+        else:
+            self.app = None
+
+    def init_app(self, app):
+        #avatar = app.config.get('AVATAR_URL', 'avatar')
+        app.add_url_rule('/api/<text>/avatar', 'avatar', self.avatar)
+
     def avatar(self, text, width=128):
         from flask import abort, make_response
         from flask_avatar.avatar import GenAvatar
