@@ -25,7 +25,7 @@ AVATAR_FOLDER = path.join(path.abspath(path.dirname(__file__)), 'static/avatars'
 AVATAR_RANGE = [122, 512]
 PICTURE_FOLDER = path.join('static/avatars')
 FILES_FOLDER = path.join('static/upload_files')
-ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'jpeg', 'gif', 'txt', 'pdf', 'doc', 'docx'])
+ALLOWED_EXTENSIONS = set([ 'png', 'jpg', 'gif', 'txt', 'pdf', 'doc', 'docx'])
 
 # for development use localhost:5000
 # for production use xxx.com
@@ -58,15 +58,15 @@ MIDDLEWARE = ['forums.common.middleware.GlobalMiddleware',
 # Mail such as qq
 MAIL_SERVER = 'localhost'
 MAIL_PORT = 25
-MAIL_USE_TLS = True
+MAIL_USE_TLS = False 
 MAIL_USE_SSL = False
-MAIL_USERNAME = "609313700"
-MAIL_PASSWORD = "zxy940530"
-MAIL_DEFAULT_SENDER = '609313700@qq.com'
+MAIL_USERNAME = "sinitek"
+MAIL_PASSWORD = "@qwe321"
+MAIL_DEFAULT_SENDER = 'sinitek@194.sinitek.com'
 # MAIL_SUPPRESS_SEND = True
 
 #SERVER_NAME = ' https://nxqwazndlk.localtunnel.me:8000'
-SERVER_URL = 'http://zxypetre.ymhui999.com:1234'
+#SERVER_URL = 'http://zxypetre.ymhui999.com:1234'
 SUBDOMAIN = {'forums': False, 'docs': False}
 
 # logging setting

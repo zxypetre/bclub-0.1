@@ -40,7 +40,7 @@ class Captcha(object):
         buf = t.start(font_type=self.font)
         buf_value = buf.getvalue()
         response = self.app.make_response(buf_value)
-        response.headers['Content-Type'] = 'image/jpeg'
+        response.headers['Content-Type'] = 'image/png'
         return response
 
 
